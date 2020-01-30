@@ -1,0 +1,13 @@
+provider “aws" {
+   region       = "eu-west-1"
+   access_key   = 
+   secret_key   = 
+}
+
+resource "aws_instance" "myfirstec2" {
+  ami = "ami-d834aba1"
+  instance_type = "t2.micro"
+           tags {
+                 Name = "terraform-myfirstec2"
+           }
+}
